@@ -1,0 +1,22 @@
+{
+  "Professor": [
+    {
+      "id": 1,
+      "nome": "Naldo",
+      "email": "naldo@gmail.com",
+      "telefone": "11 94546 9878"
+    }
+  ],
+  "Alunos": [
+    {
+      "id": 2,
+      "nome": "Will",
+      "email": "will@gmail.com",
+      "telefone": "11 94546 9878",
+      "sala": 10
+
+
+
+    }
+  ]
+}
