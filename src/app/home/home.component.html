@@ -1,26 +1,59 @@
 
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Email</th>
-      <th scope="col">Telefone</th>
+<div class="container">
 
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let professor of professor">
-      <th scope="row">{{professor.id}}</th>
-      <td>{{professor.nome}}</td>
-      <td>{{professor.email}}</td>
-      <td>{{professor.telefone}}</td>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Telefone</th>
 
-      <td>
-        <button class="btn btn-primary me-1" (click)="edit(professor)">Editar</button>
-        <button class="btn btn-primary" (click)="remove(professor)">Remove</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let professor of professor">
+        <th scope="row">{{professor.id}}</th>
+        <td>{{professor.name}}</td>
+        <td>{{professor.email}}</td>
+        <td>{{professor.telefone}}</td>
+
+        <td>
+          <button class="btn btn-primary me-1" (click)="edit(professor)">Editar</button>
+          <button class="btn btn-primary" (click)="remove(professor)">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+    <button class="btn btn-primary" (click)="create()">Novo</button>
+  </table>
+</div>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Telefone</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alunos of alunos">
+        <th scope="row">{{alunos.id}}</th>
+        <td>{{alunos.name}}</td>
+        <td>{{alunos.email}}</td>
+        <td>{{alunos.telefone}}</td>
+
+        <td>
+          <button class="btn btn-primary me-1" (click)="edits(alunos)">Editar</button>
+          <button class="btn btn-primary" (click)="delete(alunos)">Remove</button>
+
+      </tr>
+    </tbody>
+    <button class="btn btn-primary" (click)="create()">Novo</button>
+  </table>
+</div>
+

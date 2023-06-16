@@ -1,22 +1,31 @@
 {
   "Professor": [
     {
-      "id": 1,
-      "nome": "Naldo",
-      "email": "naldo@gmail.com",
-      "telefone": "11 94546 9878"
+      "id": 2,
+      "name": "Nick",
+      "email": "nicksvalle@gmail.com",
+      "telefone": "11 94645 9828"
+    },
+    {
+      "id": 4,
+      "name": "kaue",
+      "email": "kauesimao@gmail.com",
+      "telefone": "11 94645 9828"
     }
   ],
   "Alunos": [
     {
-      "id": 2,
+      "id": 1,
       "nome": "Will",
       "email": "will@gmail.com",
       "telefone": "11 94546 9878",
       "sala": 10
-
-
-
+    },
+    {
+      "id": 2,
+      "name": "Marcos",
+      "email": "teste@teste",
+      "telefone": "11 94645 9828"
     }
   ]
 }

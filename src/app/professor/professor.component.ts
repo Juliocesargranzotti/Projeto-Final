@@ -47,11 +47,13 @@ export class ProfessorComponent {
 
   save() {
     this.submitted = true;
+
     if (this.formGroupClient.valid) {
       if (this.isEditing) {
         this.professorService.update(this.formGroupClient.value).subscribe({
           next: () => {
             this.router.navigate(['professor']);
+            this.submitted = false;
           }
         })
       }
@@ -59,6 +61,8 @@ export class ProfessorComponent {
         this.professorService.save(this.formGroupClient.value).subscribe({
           next: () => {
             this.router.navigate(['professor']);
+            this.formGroupClient.reset();
+            this.submitted = false;
           }
         })
       }
@@ -68,6 +72,7 @@ export class ProfessorComponent {
   cancel() {
     this.router.navigate(['professor']);
   }
+ 
 
 
 

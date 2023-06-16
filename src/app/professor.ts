@@ -1,7 +1,7 @@
 export interface Professor{
   delete(professor: Professor): unknown;
   id : number ;
-  nome : string;
+  name : string;
   email : string;
   telefone: number;
 

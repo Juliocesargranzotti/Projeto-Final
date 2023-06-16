@@ -17,8 +17,8 @@ export class AlunosService {
       return this.http.get<Alunos[]>(this.url);
     }
 
-    getProfessor(id: number){
-      return this.http.get<Professor>(`${this.url}/${id}`);
+    getalunos(id: number){
+      return this.http.get<Alunos>(`${this.url}/${id}`);
     }
 
 
@@ -30,7 +30,7 @@ export class AlunosService {
       return this.http.put<Alunos>(`${this.url}/${alunos.id}`, alunos)
     }
 
-    delete(alunos : Alunos): Observable<void>{
+    remove(alunos : Alunos): Observable<void>{
       return this.http.delete<void>(`${this.url}/${alunos.id}`);
     }
 
