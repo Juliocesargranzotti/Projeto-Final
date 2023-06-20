@@ -3,6 +3,7 @@ export interface Alunos{
   id : number ;
   name : string;
   email : string;
+  cpf: number;
   telefone: number;
   sala : number;
 

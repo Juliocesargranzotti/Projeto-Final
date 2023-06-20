@@ -1,31 +1,51 @@
 {
   "Professor": [
     {
-      "id": 2,
-      "name": "Nick",
-      "email": "nicksvalle@gmail.com",
+      "id": 1,
+      "name": "kaue",
+      "email": "kauesimao@gmail.com",
+      "materia": "quimica",
       "telefone": "11 94645 9828"
     },
     {
-      "id": 4,
-      "name": "kaue",
-      "email": "kauesimao@gmail.com",
-      "telefone": "11 94645 9828"
+      "id": 2,
+      "name": "Julio",
+      "email": "Julio@gmail.com",
+      "materia": "matematica",
+      "telefone": "11 94142 6798"
+    },
+    {
+      "id": 3,
+      "name": "23141",
+      "email": "maugranzotti@gmail.com",
+      "materia": "matematica",
+      "telefone": "11 95464 2342"
     }
   ],
   "Alunos": [
     {
       "id": 1,
-      "nome": "Will",
-      "email": "will@gmail.com",
-      "telefone": "11 94546 9878",
-      "sala": 10
+      "name": "Lucas Lira",
+      "email": "Lucasl@gmail.com",
+      "cpf": "087812746789",
+      "sala": "12",
+      "telefone": "11 95464 2342"
     },
     {
       "id": 2,
       "name": "Marcos",
-      "email": "teste@teste",
-      "telefone": "11 94645 9828"
+      "email": "Marcos@gmail.com",
+      "cpf": "41 9876438",
+      "sala": "4",
+      "telefone": "11 95464 2342"
+    },
+    {
+      "id": 3,
+      "name": "Laura",
+      "email": "laura@gmail.com",
+      "cpf": "213123141",
+      "sala": "6",
+      "telefone": "11 95464 2342"
     }
   ]
 }

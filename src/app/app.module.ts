@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfessorFormComponent } from './professor-form/professor-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProfessorComponent,
     AlunosComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProfessorFormComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ export interface Professor{
   id : number ;
   name : string;
   email : string;
+  materia: string;
   telefone: number;
 
 

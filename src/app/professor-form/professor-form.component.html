@@ -5,7 +5,7 @@
     <form [formGroup]="formGroupClient">
  <div class="mb-2">
   <div class="display-6 text-center">
-      Cadastro De Alunos
+      Cadastro De Professor
   </div>
     </div>
     <div class="mb-2">
@@ -25,23 +25,13 @@
   </div>
     </div>
 
-
     <div class="mb-2">
-      <label for="cpf" class="form-label">CPF:</label>
-      <input type="cpf" formControlName="cpf" class="form-control" id="cpf" placeholder="CPF">
-      <div *ngIf="submitted && cpf.invalid">
-        <small class="text-danger">CPF inválido!</small>
+      <label for="materia" class="form-label">Materia :</label>
+      <input type="materia" formControlName="materia" class="form-control" id="materia" placeholder="Materia">
+      <div *ngIf="submitted && materia.invalid">
+        <small class="text-danger">Materia inválido!</small>
   </div>
     </div>
-
-    <div class="mb-2">
-      <label for="sala" class="form-label">SALA:</label>
-      <input type="sala" formControlName="sala" class="form-control" id="sala" placeholder="Sala">
-      <div *ngIf="submitted && sala.invalid">
-        <small class="text-danger">Sala errada!</small>
-  </div>
-    </div>
-
 
 
     <div class="mb-2">
@@ -57,6 +47,4 @@
       <button type="button" class="btn btn-dark" (click)="cancel()">Limpar</button>
     </div>
 </form>
-
-
 </div>

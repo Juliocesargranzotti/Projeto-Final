@@ -1,59 +1,39 @@
-
+<div class="display-6 text-center">
+  Tabela Alunos
+</div>
 
 <div class="container">
-
   <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Nome</th>
         <th scope="col">Email</th>
+        <th scope="col">CPF</th>
         <th scope="col">Telefone</th>
-
+        <th scope="col">Sala</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let professor of professor">
-        <th scope="row">{{professor.id}}</th>
-        <td>{{professor.name}}</td>
-        <td>{{professor.email}}</td>
-        <td>{{professor.telefone}}</td>
-
+      <tr *ngFor="let aluno of alunos">
+        <th scope="row">{{aluno.id}}</th>
+        <td>{{aluno.name}}</td>
+        <td>{{aluno.email}}</td>
+        <td>{{aluno.cpf}}</td>
+        <td>{{aluno.telefone}}</td>
+        <td>{{aluno.sala}}</td>
         <td>
-          <button class="btn btn-primary me-1" (click)="edit(professor)">Editar</button>
-          <button class="btn btn-primary" (click)="remove(professor)">Remove</button>
+          <button class="btn btn-primary me-1" (click)="edit(aluno)">Editar</button>
+          <button class="btn btn-primary" (click)="delete(aluno)">Remover</button>
         </td>
       </tr>
     </tbody>
-    <button class="btn btn-primary" (click)="create()">Novo</button>
-  </table>
-</div>
-
-<div class="container">
-  <table class="table table-striped">
-    <thead>
+    <tfoot>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Email</th>
-        <th scope="col">Telefone</th>
-
+        <td colspan="7" class="text-end">
+          <button class="btn btn-danger" (click)="create()">Novo</button>
+        </td>
       </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let alunos of alunos">
-        <th scope="row">{{alunos.id}}</th>
-        <td>{{alunos.name}}</td>
-        <td>{{alunos.email}}</td>
-        <td>{{alunos.telefone}}</td>
-
-        <td>
-          <button class="btn btn-primary me-1" (click)="edits(alunos)">Editar</button>
-          <button class="btn btn-primary" (click)="delete(alunos)">Remove</button>
-
-      </tr>
-    </tbody>
-    <button class="btn btn-primary" (click)="create()">Novo</button>
+    </tfoot>
   </table>
 </div>
-

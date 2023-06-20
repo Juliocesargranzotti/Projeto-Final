@@ -1,20 +1,22 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Professor } from '../professor';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AlunosService } from '../alunos.service';
+import { ProfessorService } from '../professor.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-alunos',
-  templateUrl: './alunos.component.html',
-  styleUrls: ['./alunos.component.css']
+  selector: 'app-professor-form',
+  templateUrl: './professor-form.component.html',
+  styleUrls: ['./professor-form.component.css']
 })
-export class AlunosComponent {
+export class ProfessorFormComponent {
+
   formGroupClient: FormGroup;
   submitted: boolean = false;
   isEditing: boolean = false;
 
   constructor(private formBuilder: FormBuilder,
-    private alunosService: AlunosService,
+    private professorService: ProfessorService,
     private route: ActivatedRoute,
     private router: Router
 
@@ -23,20 +25,19 @@ export class AlunosComponent {
       id: [''],
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      cpf:['',[Validators.required]],
-      sala:['',[Validators.required]],
+      materia: ['',[Validators.required]],
       telefone:['',[Validators.required]]
     });
   }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get("id"));
-    this.getAlunosById(id);
+    this.getProfessorById(id);
   }
 
 
-  getAlunosById(id: number) {
-    this.alunosService.getalunos(id).subscribe({
+  getProfessorById(id: number) {
+    this.professorService.getProfessores(id).subscribe({
       next: data => {
         this.formGroupClient.setValue(data);
         this.isEditing = true;
@@ -50,17 +51,17 @@ export class AlunosComponent {
 
     if (this.formGroupClient.valid) {
       if (this.isEditing) {
-        this.alunosService.update(this.formGroupClient.value).subscribe({
+        this.professorService.update(this.formGroupClient.value).subscribe({
           next: () => {
-            this.router.navigate(['alunos']);
+            this.router.navigate(['professor']);
             this.submitted = false;
           }
         })
       }
       else {
-        this.alunosService.save(this.formGroupClient.value).subscribe({
+        this.professorService.save(this.formGroupClient.value).subscribe({
           next: () => {
-            this.router.navigate(['alunos']);
+            this.router.navigate(['professor']);
             this.formGroupClient.reset();
             this.submitted = false;
           }
@@ -70,7 +71,7 @@ export class AlunosComponent {
   }
 
   cancel() {
-    this.router.navigate(['alunos']);
+    this.router.navigate(['professor']);
   }
 
 
@@ -84,17 +85,12 @@ export class AlunosComponent {
     return this.formGroupClient.get("email");
   }
 
-  get cpf(): any {
-    return this.formGroupClient.get("cpf");
+  get materia(): any {
+    return this.formGroupClient.get("materia");
   }
 
   get telefone(): any {
     return this.formGroupClient.get("telefone");
   }
-  get sala(): any {
-    return this.formGroupClient.get("sala");
-  }
 
 }
-
-
