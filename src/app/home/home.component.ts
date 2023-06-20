@@ -45,7 +45,7 @@ export class HomeComponent {
 
   create(){
 
-    this.router.navigate(['createAlunos']);
+    this.router.navigate(['alunos']);
   }
 
 
