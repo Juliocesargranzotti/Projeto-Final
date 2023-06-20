@@ -8,11 +8,18 @@ import { AlunosService } from '../alunos.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+
 })
+
 export class HomeComponent {
 
   alunos : Alunos[] = [];
+  Alunos = [
+    { nome: 'João', dataNascimento: '2001-02-03' },
+    { nome: 'Maria', dataNascimento: '1995-11-08' },
+    { nome: 'Pedro', dataNascimento: '1987-06-12' }
+  ];
 
 
   constructor(
@@ -55,6 +62,8 @@ export class HomeComponent {
       next : () => this.loadAlunos()
     })
   }
+
+
 }
 
 

@@ -5,7 +5,7 @@ export interface Alunos{
   email : string;
   cpf: number;
   telefone: number;
-  sala : number;
+  datanascimento : number;
 
 
 }

@@ -1,3 +1,6 @@
+<div class="display-6 text-center">
+  <h2>{{ "Tabela Professores" | uppercase }}</h2>
+</div>
 <div class="container">
 
   <table class="table table-striped">
@@ -16,8 +19,9 @@
         <th scope="row">{{professor.id}}</th>
         <td>{{professor.name}}</td>
         <td>{{professor.email}}</td>
-        <td>{{professor.telefone}}</td>
         <td>{{professor.materia}}</td>
+        <td>{{professor.telefone}}</td>
+
 
         <td>
           <button class="btn btn-primary me-1" (click)="edit(professor)">Editar</button>

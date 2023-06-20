@@ -24,7 +24,7 @@ export class AlunosComponent {
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       cpf:['',[Validators.required]],
-      sala:['',[Validators.required]],
+      datanascimento:['',[Validators.required]],
       telefone:['',[Validators.required]]
     });
   }
@@ -91,8 +91,8 @@ export class AlunosComponent {
   get telefone(): any {
     return this.formGroupClient.get("telefone");
   }
-  get sala(): any {
-    return this.formGroupClient.get("sala");
+  get datanascimento(): any {
+    return this.formGroupClient.get("datanascimento");
   }
 
 }

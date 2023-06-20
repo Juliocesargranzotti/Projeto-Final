@@ -1,5 +1,7 @@
+
+
 <div class="display-6 text-center">
-  Tabela Alunos
+  <h2>{{ "Tabela Alunos" | uppercase }}</h2>
 </div>
 
 <div class="container">
@@ -11,7 +13,7 @@
         <th scope="col">Email</th>
         <th scope="col">CPF</th>
         <th scope="col">Telefone</th>
-        <th scope="col">Sala</th>
+        <th scope="col">Certidão</th>
       </tr>
     </thead>
     <tbody>
@@ -21,12 +23,12 @@
         <td>{{aluno.email}}</td>
         <td>{{aluno.cpf}}</td>
         <td>{{aluno.telefone}}</td>
-        <td>{{aluno.sala}}</td>
+        <td>{{aluno.datanascimento}}</td>
         <td>
           <button class="btn btn-primary me-1" (click)="edit(aluno)">Editar</button>
           <button class="btn btn-primary" (click)="delete(aluno)">Remover</button>
         </td>
-      </tr>
+
     </tbody>
     <tfoot>
       <tr>
