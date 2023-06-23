@@ -23,7 +23,7 @@
         <td>{{aluno.email}}</td>
         <td>{{aluno.cpf}}</td>
         <td>{{aluno.telefone}}</td>
-        <td>{{aluno.datanascimento}}</td>
+        <td style="font-style: italic;">{{aluno.datanascimento | date:'dd/MM/yyyy'}}</td>
         <td>
           <button class="btn btn-primary me-1" (click)="edit(aluno)">Editar</button>
           <button class="btn btn-primary" (click)="delete(aluno)">Remover</button>

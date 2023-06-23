@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProfessorService } from '../professor.service';
 
+
 @Component({
   selector: 'app-professor',
   templateUrl: './professor.component.html',

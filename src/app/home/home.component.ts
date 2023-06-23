@@ -16,9 +16,8 @@ export class HomeComponent {
 
   alunos : Alunos[] = [];
   Alunos = [
-    { nome: 'João', dataNascimento: '2001-02-03' },
-    { nome: 'Maria', dataNascimento: '1995-11-08' },
-    { nome: 'Pedro', dataNascimento: '1987-06-12' }
+    { nome: 'João', dataNascimento: '2001-02-03' }
+
   ];
 
 

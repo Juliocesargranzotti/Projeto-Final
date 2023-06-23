@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfessorFormComponent } from './professor-form/professor-form.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,10 @@ import { ProfessorFormComponent } from './professor-form/professor-form.componen
     AlunosComponent,
     HomeComponent,
     HeaderComponent,
-    ProfessorFormComponent
+    ProfessorFormComponent,
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,8 @@ import { ProfessorFormComponent } from './professor-form/professor-form.componen
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
